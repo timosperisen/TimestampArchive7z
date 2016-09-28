@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\TimestampArchive7z]
+
+[HKEY_CLASSES_ROOT\Directory\shell\TimestampArchive7z\command]
+@="powershell.exe -NonInteractive -command \"$v = '%v';$a = $v.split('\\');$l = $a.length-1;$na = $a[0..($l-1)];$od = $na -join '\\';$dn =$a[$l];$ts = $(get-date -f yyyy-MM-dd_hhmmss);$fn = -join('archive_', $dn , '_', $ts, '.zip');;set-alias sz \"$env:ProgramFiles\\7-Zip\\7z.exe\";sz a \"${od}\\${fn}\" $v\""
