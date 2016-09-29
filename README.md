@@ -35,6 +35,11 @@ The file TimestampArchive7z.ps1 contains the commented PowerShell code that is i
 * A timestamped zip file should appear. If not, something might not work properly.
 * If nothing happens you can change the registry and change the -NonInteractive flag to -noexit and then install again. The Powershell window will not disappear and you might see the reason for the problem.
 
+## FAQ
+**I get a strange error dialog:**
+
+This could mean that powershell.exe is not found. The easiest way is to add the PowerShell Directory to the PATH environment variable. ( Default Location on 64 Bit Systems: **C:\WINDOWS\System32\WindowsPowerShell\v1.0** or use **%SYSTEMROOT%\System32\WindowsPowerShell\v1.0**  if you didn't use the default folder during windows installation)
+
 ## Ideas for changes
 * Switch from .zip to .7z as file extension
 * Use more command line arguments
